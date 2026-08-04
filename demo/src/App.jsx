@@ -10,6 +10,7 @@ import MapandKey from './MapandKey'
 import Hideandshow from './Hideandshow'
 import Clock from './Clock'
 import UserList from './New'
+import { Routes,Route,link } from 'react-router-dom'
 function App(){
     return (
       <div>
@@ -19,6 +20,10 @@ function App(){
         <Hideandshow />
         <Clock/>
         <UserList />
+        <Link to="/">home</Link>
+
+        <Routes>
+        </Routes>
       </div>
     )
 
