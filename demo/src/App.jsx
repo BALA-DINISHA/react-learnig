@@ -10,20 +10,25 @@ import MapandKey from './MapandKey'
 import Hideandshow from './Hideandshow'
 import Clock from './Clock'
 import UserList from './New'
-import { Routes,Route,link } from 'react-router-dom'
+import { Routes,Route,Link } from 'react-router-dom'
 function App(){
     return (
       <div>
+         <nav>
+         <Link to="/clock">Clock</Link>
+       </nav>
+        <Routes>
+          <Route path="/clock" element={<Clock/>}></Route>
+        </Routes>
         <ProfileInfo id="1" name="Dinisha" role="Software developer"/>
         <ProfileInfo id="2" name="Priya" role="Designer"/>
         <ProfileInfo id="3" name="Divya" role="Software QA"/>
         <Hideandshow />
         <Clock/>
         <UserList />
-        <Link to="/">home</Link>
+        
 
-        <Routes>
-        </Routes>
+       
       </div>
     )
 

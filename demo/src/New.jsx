@@ -5,7 +5,7 @@ function UserList() {
     const [loading, setLoading]= useState(true);
     const [error, setError]=useState(null);
     useEffect(() => {
-        axios.get('https://jsplaceholder.typicode.com/users')
+        axios.get('http://localhost:4444/api/people')
         .then((Response) => {
             setUsers(Response.data);
         }).catch((err)=>{
